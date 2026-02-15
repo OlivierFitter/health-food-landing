@@ -1,0 +1,350 @@
+{
+  "mapping_ciqual_vers_recommandations": {
+    "description": "Table de correspondance entre les noms de nutriments de la base Ciqual 2025 et le fichier diet_cible.json",
+    "version": "1.0",
+    "date": "2025-01-08",
+    
+    "macronutriments": {
+      "energie": {
+        "cle_ciqual": "Energie, Règlement UE N° 1169/2011 (kcal/100 g)",
+        "cle_diet": "metadonnees.besoin_energetique_kcal",
+        "unite_ciqual": "kcal/100g",
+        "unite_diet": "kcal/jour",
+        "categorie": "1_macronutriments_gpl"
+      },
+      "glucides": {
+        "cle_ciqual": "Glucides (g/100 g)",
+        "cle_diet": "1_macronutriments_gpl.base_calcul_2000_kcal.glucides.quantite_grammes_jour",
+        "unite_ciqual": "g/100g",
+        "unite_diet": "g/jour",
+        "categorie": "1_macronutriments_gpl"
+      },
+      "proteines": {
+        "cle_ciqual": "Protéines, N x 6.25 (g/100 g)",
+        "cle_diet": "1_macronutriments_gpl.base_calcul_2000_kcal.proteines.quantite_grammes_jour",
+        "unite_ciqual": "g/100g",
+        "unite_diet": "g/jour",
+        "categorie": "1_macronutriments_gpl"
+      },
+      "lipides": {
+        "cle_ciqual": "Lipides (g/100 g)",
+        "cle_diet": "1_macronutriments_gpl.base_calcul_2000_kcal.lipides.quantite_grammes_jour",
+        "unite_ciqual": "g/100g",
+        "unite_diet": "g/jour",
+        "categorie": "1_macronutriments_gpl"
+      },
+      "sucres": {
+        "cle_ciqual": "Sucres (g/100 g)",
+        "cle_diet": "1_macronutriments_gpl.base_calcul_2000_kcal.glucides.detail_composition.sucres_totaux_max",
+        "unite_ciqual": "g/100g",
+        "unite_diet": "g/jour",
+        "valeur_max": 100,
+        "categorie": "1_macronutriments_gpl"
+      }
+    },
+
+    "acides_gras": {
+      "ag_satures": {
+        "cle_ciqual": "AG saturés (g/100 g)",
+        "cle_diet": "2_acides_gras.acides_gras_satures.quantite_max_jour",
+        "unite_ciqual": "g/100g",
+        "unite_diet": "g/jour",
+        "valeur_max": 27,
+        "categorie": "2_acides_gras"
+      },
+      "ag_monoinsatures": {
+        "cle_ciqual": "AG monoinsaturés (g/100 g)",
+        "cle_diet": "2_acides_gras.acides_gras_monoinsatures_omega9.quantite_cible_jour",
+        "unite_ciqual": "g/100g",
+        "unite_diet": "g/jour",
+        "valeur_cible": 39,
+        "categorie": "2_acides_gras"
+      },
+      "ag_polyinsatures": {
+        "cle_ciqual": "AG polyinsaturés (g/100 g)",
+        "cle_diet": "2_acides_gras.acides_gras_polyinsatures",
+        "unite_ciqual": "g/100g",
+        "unite_diet": "g/jour",
+        "categorie": "2_acides_gras"
+      },
+      "ag_linoleique_omega6": {
+        "cle_ciqual": "AG 18:2 9c,12c (n-6), linoléique (g/100 g)",
+        "cle_diet": "2_acides_gras.acides_gras_polyinsatures.omega6_acide_linoleique_LA.quantite_cible_jour",
+        "unite_ciqual": "g/100g",
+        "unite_diet": "g/jour",
+        "valeur_cible": 10,
+        "categorie": "2_acides_gras"
+      },
+      "ag_alpha_linolenique_omega3": {
+        "cle_ciqual": "AG 18:3 c9,c12,c15 (n-3), alpha-linolénique (g/100 g)",
+        "cle_diet": "2_acides_gras.acides_gras_polyinsatures.omega3_acide_alpha_linolenique_ALA.quantite_cible_jour",
+        "unite_ciqual": "g/100g",
+        "unite_diet": "g/jour",
+        "valeur_cible": 2.5,
+        "categorie": "2_acides_gras"
+      },
+      "epa": {
+        "cle_ciqual": "AG 20:5 5c,8c,11c,14c,17c (n-3) EPA (g/100 g)",
+        "cle_diet": "2_acides_gras.acides_gras_polyinsatures.omega3_longue_chaine_EPA_DHA.quantite_cible_jour",
+        "unite_ciqual": "g/100g",
+        "unite_diet": "mg/jour",
+        "conversion": 1000,
+        "note": "Additionner EPA + DHA, valeur cible totale = 500 mg/jour",
+        "categorie": "2_acides_gras"
+      },
+      "dha": {
+        "cle_ciqual": "AG 22:6 4c,7c,10c,13c,16c,19c (n-3) DHA (g/100 g)",
+        "cle_diet": "2_acides_gras.acides_gras_polyinsatures.omega3_longue_chaine_EPA_DHA.quantite_cible_jour",
+        "unite_ciqual": "g/100g",
+        "unite_diet": "mg/jour",
+        "conversion": 1000,
+        "note": "Additionner EPA + DHA, valeur cible totale = 500 mg/jour",
+        "categorie": "2_acides_gras"
+      },
+      "cholesterol": {
+        "cle_ciqual": "Cholestérol (mg/100 g)",
+        "cle_diet": null,
+        "note": "Pas de recommandation ANSES pour cholestérol alimentaire",
+        "categorie": "2_acides_gras"
+      }
+    },
+
+    "vitamines_liposolubles": {
+      "vitamine_a": {
+        "cle_ciqual": "Activité vitaminique A, équivalents rétinol (µg/100 g)",
+        "cle_diet": "4_vitamines_liposolubles.vitamine_A_retinol.valeur_adulte_mixte",
+        "unite_ciqual": "µg/100g",
+        "unite_diet": "µg/jour",
+        "valeur_cible": 700,
+        "categorie": "4_vitamines_liposolubles"
+      },
+      "vitamine_d": {
+        "cle_ciqual": "Vitamine D (µg/100 g)",
+        "cle_diet": "4_vitamines_liposolubles.vitamine_D_cholecalciferol.rnp",
+        "unite_ciqual": "µg/100g",
+        "unite_diet": "µg/jour",
+        "valeur_cible": 15,
+        "categorie": "4_vitamines_liposolubles"
+      },
+      "vitamine_e": {
+        "cle_ciqual": "Vitamine E (mg/100 g)",
+        "cle_diet": "4_vitamines_liposolubles.vitamine_E_tocopherol.valeur_adulte_mixte",
+        "unite_ciqual": "mg/100g",
+        "unite_diet": "mg/jour",
+        "valeur_cible": 9.5,
+        "categorie": "4_vitamines_liposolubles"
+      },
+      "vitamine_k": {
+        "cle_ciqual": "Vitamine K1 (µg/100 g)",
+        "cle_diet": "4_vitamines_liposolubles.vitamine_K_phylloquinone.as",
+        "unite_ciqual": "µg/100g",
+        "unite_diet": "µg/jour",
+        "valeur_cible": 79,
+        "categorie": "4_vitamines_liposolubles"
+      }
+    },
+
+    "vitamines_hydrosolubles": {
+      "vitamine_c": {
+        "cle_ciqual": "Vitamine C (mg/100 g)",
+        "cle_diet": "5_vitamines_hydrosolubles.vitamine_C_acide_ascorbique.rnp",
+        "unite_ciqual": "mg/100g",
+        "unite_diet": "mg/jour",
+        "valeur_cible": 110,
+        "categorie": "5_vitamines_hydrosolubles"
+      },
+      "vitamine_b1": {
+        "cle_ciqual": "Vitamine B1 ou Thiamine (mg/100 g)",
+        "cle_diet": "5_vitamines_hydrosolubles.vitamine_B1_thiamine.valeur_adulte_mixte",
+        "unite_ciqual": "mg/100g",
+        "unite_diet": "mg/jour",
+        "valeur_cible": 1.2,
+        "categorie": "5_vitamines_hydrosolubles"
+      },
+      "vitamine_b2": {
+        "cle_ciqual": "Vitamine B2 ou Riboflavine (mg/100 g)",
+        "cle_diet": "5_vitamines_hydrosolubles.vitamine_B2_riboflavine.valeur_adulte_mixte",
+        "unite_ciqual": "mg/100g",
+        "unite_diet": "mg/jour",
+        "valeur_cible": 1.55,
+        "categorie": "5_vitamines_hydrosolubles"
+      },
+      "vitamine_b3": {
+        "cle_ciqual": "Vitamine B3 ou PP ou Niacine (mg/100 g)",
+        "cle_diet": "5_vitamines_hydrosolubles.vitamine_B3_niacine.valeur_adulte_mixte",
+        "unite_ciqual": "mg/100g",
+        "unite_diet": "mg/jour",
+        "valeur_cible": 15,
+        "categorie": "5_vitamines_hydrosolubles"
+      },
+      "vitamine_b5": {
+        "cle_ciqual": "Vitamine B5 ou Acide pantothénique (mg/100 g)",
+        "cle_diet": "5_vitamines_hydrosolubles.vitamine_B5_acide_pantothenique.as",
+        "unite_ciqual": "mg/100g",
+        "unite_diet": "mg/jour",
+        "valeur_cible": 5,
+        "categorie": "5_vitamines_hydrosolubles"
+      },
+      "vitamine_b6": {
+        "cle_ciqual": "Vitamine B6 (mg/100 g)",
+        "cle_diet": "5_vitamines_hydrosolubles.vitamine_B6_pyridoxine.valeur_adulte_mixte",
+        "unite_ciqual": "mg/100g",
+        "unite_diet": "mg/jour",
+        "valeur_cible": 1.6,
+        "categorie": "5_vitamines_hydrosolubles"
+      },
+      "vitamine_b9": {
+        "cle_ciqual": "Vitamine B9 ou Folates totaux, équivalents folates alimentaires, DFE (µg/100 g)",
+        "cle_diet": "5_vitamines_hydrosolubles.vitamine_B9_folates.rnp",
+        "unite_ciqual": "µg/100g",
+        "unite_diet": "µg/jour",
+        "valeur_cible": 330,
+        "categorie": "5_vitamines_hydrosolubles"
+      },
+      "vitamine_b12": {
+        "cle_ciqual": "Vitamine B12 (µg/100 g)",
+        "cle_diet": "5_vitamines_hydrosolubles.vitamine_B12_cobalamine.rnp",
+        "unite_ciqual": "µg/100g",
+        "unite_diet": "µg/jour",
+        "valeur_cible": 4,
+        "categorie": "5_vitamines_hydrosolubles"
+      }
+    },
+
+    "mineraux": {
+      "calcium": {
+        "cle_ciqual": "Calcium (mg/100 g)",
+        "cle_diet": "6_sels_mineraux_macroelements.calcium.rnp",
+        "unite_ciqual": "mg/100g",
+        "unite_diet": "mg/jour",
+        "valeur_cible": 950,
+        "categorie": "6_sels_mineraux_macroelements"
+      },
+      "magnesium": {
+        "cle_ciqual": "Magnésium (mg/100 g)",
+        "cle_diet": "6_sels_mineraux_macroelements.magnesium.valeur_adulte_mixte",
+        "unite_ciqual": "mg/100g",
+        "unite_diet": "mg/jour",
+        "valeur_cible": 340,
+        "categorie": "6_sels_mineraux_macroelements"
+      },
+      "potassium": {
+        "cle_ciqual": "Potassium (mg/100 g)",
+        "cle_diet": "6_sels_mineraux_macroelements.potassium.as",
+        "unite_ciqual": "mg/100g",
+        "unite_diet": "mg/jour",
+        "valeur_cible": 3500,
+        "categorie": "6_sels_mineraux_macroelements"
+      },
+      "phosphore": {
+        "cle_ciqual": "Phosphore (mg/100 g)",
+        "cle_diet": "6_sels_mineraux_macroelements.phosphore.as",
+        "unite_ciqual": "mg/100g",
+        "unite_diet": "mg/jour",
+        "valeur_cible": 550,
+        "categorie": "6_sels_mineraux_macroelements"
+      },
+      "sodium": {
+        "cle_ciqual": "Sodium (mg/100 g)",
+        "cle_diet": "6_sels_mineraux_macroelements.sodium.as",
+        "unite_ciqual": "mg/100g",
+        "unite_diet": "mg/jour",
+        "valeur_max": 2000,
+        "note": "Maximum 2000 mg sodium = 5g sel",
+        "categorie": "6_sels_mineraux_macroelements"
+      },
+      "chlorure": {
+        "cle_ciqual": "Chlorure (mg/100 g)",
+        "cle_diet": "6_sels_mineraux_macroelements.chlorure.as",
+        "unite_ciqual": "mg/100g",
+        "unite_diet": "mg/jour",
+        "valeur_cible": 3100,
+        "categorie": "6_sels_mineraux_macroelements"
+      },
+      "fer": {
+        "cle_ciqual": "Fer (mg/100 g)",
+        "cle_diet": "7_oligo_elements.fer.valeur_adulte_mixte",
+        "unite_ciqual": "mg/100g",
+        "unite_diet": "mg/jour",
+        "valeur_cible": 13.5,
+        "categorie": "7_oligo_elements"
+      },
+      "zinc": {
+        "cle_ciqual": "Zinc (mg/100 g)",
+        "cle_diet": "7_oligo_elements.zinc.valeur_adulte_mixte",
+        "unite_ciqual": "mg/100g",
+        "unite_diet": "mg/jour",
+        "valeur_cible": 10,
+        "categorie": "7_oligo_elements"
+      },
+      "iode": {
+        "cle_ciqual": "Iode (µg/100 g)",
+        "cle_diet": "7_oligo_elements.iode.rnp",
+        "unite_ciqual": "µg/100g",
+        "unite_diet": "µg/jour",
+        "valeur_cible": 150,
+        "categorie": "7_oligo_elements"
+      },
+      "selenium": {
+        "cle_ciqual": "Sélénium (µg/100 g)",
+        "cle_diet": "7_oligo_elements.selenium.valeur_adulte_mixte",
+        "unite_ciqual": "µg/100g",
+        "unite_diet": "µg/jour",
+        "valeur_cible": 65,
+        "categorie": "7_oligo_elements"
+      },
+      "cuivre": {
+        "cle_ciqual": "Cuivre (mg/100 g)",
+        "cle_diet": "7_oligo_elements.cuivre.as",
+        "unite_ciqual": "mg/100g",
+        "unite_diet": "mg/jour",
+        "valeur_cible": 1.5,
+        "categorie": "7_oligo_elements"
+      },
+      "manganese": {
+        "cle_ciqual": "Manganèse (mg/100 g)",
+        "cle_diet": "7_oligo_elements.manganese.as",
+        "unite_ciqual": "mg/100g",
+        "unite_diet": "mg/jour",
+        "valeur_cible": 2.8,
+        "categorie": "7_oligo_elements"
+      }
+    },
+
+    "autres": {
+      "fibres": {
+        "cle_ciqual": "Fibres alimentaires (g/100 g)",
+        "cle_diet": "8_autres_nutriments_essentiels.fibres_alimentaires.as_minimum",
+        "unite_ciqual": "g/100g",
+        "unite_diet": "g/jour",
+        "valeur_min": 30,
+        "categorie": "8_autres_nutriments_essentiels"
+      },
+      "eau": {
+        "cle_ciqual": "Eau (g/100 g)",
+        "cle_diet": "8_autres_nutriments_essentiels.eau_totale.valeur_adulte_mixte",
+        "unite_ciqual": "g/100g",
+        "unite_diet": "ml/jour",
+        "valeur_cible": 2250,
+        "note": "1g eau = 1ml",
+        "categorie": "8_autres_nutriments_essentiels"
+      },
+      "sel": {
+        "cle_ciqual": "Sel chlorure de sodium (g/100 g)",
+        "cle_diet": "6_sels_mineraux_macroelements.sodium.sel_equivalent",
+        "unite_ciqual": "g/100g",
+        "unite_diet": "g/jour",
+        "valeur_max": 5,
+        "categorie": "6_sels_mineraux_macroelements"
+      }
+    },
+
+    "notes_utilisation": {
+      "conversion_portions": "Nutriment du repas (g) = (quantité aliment (g) / 100) × valeur Ciqual (pour 100g)",
+      "somme_repas": "Additionner tous les aliments du repas pour obtenir le total de chaque nutriment",
+      "comparaison": "Comparer total repas vs valeur_cible de diet_cible.json",
+      "gestion_valeurs_manquantes": "Si valeur Ciqual = '-' ou 'traces' ou '< X', considérer comme 0 pour le calcul",
+      "analyse_multi_repas": "Pour analyse sur plusieurs jours, additionner tous les repas puis diviser par nombre de jours"
+    }
+  }
+}
