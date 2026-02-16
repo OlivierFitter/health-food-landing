@@ -272,7 +272,7 @@ a:hover {
 /* ========== Hero ========== */
 .hero {
   position: relative;
-  padding-block: var(--space-3xl) var(--space-3xl);
+  padding-block: var(--space-lg) var(--space-3xl);
   overflow: hidden;
 }
 
