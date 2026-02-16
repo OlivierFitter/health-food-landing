@@ -1380,6 +1380,30 @@ a:hover {
   }
 }
 
+/* ========== Ref stars & link (prévention) ========== */
+.ref-star {
+  color: #e67e22;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.ref-link {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  color: #e67e22 !important;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  font-style: italic;
+  text-decoration: none;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.ref-link:hover {
+  color: #d35400 !important;
+  border-bottom-color: #d35400;
+}
+
 /* ========== Footer ========== */
 .footer {
   padding-block: var(--space-xl);
@@ -1429,9 +1453,8 @@ a:hover {
 
 /* Animation du numéro au survol */
 .step:hover .step-num {
-  transform: scale(1.15) rotate(5deg);
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4);
+  transform: scale(1.15);
+  color: var(--accent);
 }
 
 .step-num {
@@ -1440,12 +1463,11 @@ a:hover {
 
 /* Animation de l'icône au survol */
 .step:hover .step-icon {
-  transform: scale(1.1) rotate(-5deg);
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transform: scale(1.1);
 }
 
 .step:hover .step-icon svg {
-  stroke: white;
+  stroke: var(--accent);
 }
 
 .step-icon {
@@ -1458,7 +1480,7 @@ a:hover {
 
 /* Animation du contenu au survol */
 .step:hover .step-content h3 {
-  color: #667eea;
+  color: var(--primary);
   transform: translateX(5px);
 }
 
@@ -1471,19 +1493,7 @@ a:hover {
   transition: all 0.3s ease;
 }
 
-/* Effet de pulse sur le numéro */
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
-.step:hover .step-num {
-  animation: pulse 1s ease-in-out infinite;
-}
+/* Effet de pulse sur le numéro — désactivé (trop intrusif) */
 
 /* Effet de brillance qui traverse l'étape */
 @keyframes shine {

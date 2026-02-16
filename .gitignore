@@ -1,7 +1,2 @@
 ~$*
 .DS_Store
-
-# Fichiers vidéo trop volumineux pour GitHub (>100Mo)
-*.MOV
-*.mov
-*.mp4
